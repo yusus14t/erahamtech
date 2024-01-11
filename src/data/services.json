@@ -1,0 +1,41 @@
+[
+    {
+        "name":"UI / UX Design",
+        "did":"ui-ux",
+        "icon":"https://cdn-icons-png.flaticon.com/512/8448/8448908.png",
+        "images":"",
+        "description":"We excel in UI/UX design, harmonizing aesthetics and functionality for impactful digital experiences. Our team transforms concepts into visually appealing interfaces, prioritizing user satisfaction. Elevate your brand with our innovative designs, ensuring a compelling and intuitive journey for your audience in the digital realm."
+    },
+    {
+        "name":"Web Development",
+        "id":"web-development",
+        "icon":"https://cdn.iconscout.com/icon/free/png-512/free-web-development-1815631-1740054.png?f=webp&w=512",
+        "images":"",
+        "description":"Our company develops websites with renowned and adaptable web structures.We place a high value on creating error-free loading pages in order to provide your customers with a smooth browsing experience. Our web developers concentrate on developing web structures that are adaptable and future-proof."
+    },{
+        "name":"App Development",
+        "id":"app-development",
+        "icon":"https://cdn-icons-png.flaticon.com/512/5738/5738077.png",
+        "images":"",
+        "description":"Our team of software developers can build exceptional applications across a breadth of devices including desktop, mobile and tablet. With the help of our industry expertise, we are able to give the end user the best application experience across multiple channels."
+    },{
+        "name":"Custom Software Development",
+        "id":"custom-software-development",
+        "icon":"https://cdn-icons-png.flaticon.com/512/8759/8759392.png?ga=GA1.1.1962527357.1702278159&amp;",
+        "images":"",
+        "description":"We create tailored software solutions, precisely crafted to elevate your business efficiency and meet your specific requirements. Our team is dedicated to delivering innovative and effective software that empowers your organization for success."
+    },{
+        "name":"Digital Marketing",
+        "id":"digital-marketing",
+        "icon":"https://cdn-icons-png.flaticon.com/512/3141/3141158.png",
+        "images":"",
+        "description":"Empower your brand with our dynamic digital marketing solutions. We leverage strategic campaigns, social media prowess, and SEO expertise to elevate your online presence. Our team crafts engaging content and implements data-driven strategies, driving visibility and customer engagement to propel your business forward in the digital landscape."
+    },
+    {
+        "name":"SEO",
+        "id":"seo",
+        "icon":"https://cdn-icons-png.flaticon.com/512/2977/2977742.png?ga=GA1.1.1962527357.1702278159&amp;",
+        "images":"",
+        "description":"Elevate your online visibility with our expert SEO services. We optimize your website to rank higher on search engines, employing strategic keyword placement, content enhancement, and backlink strategies. Our goal is to enhance your digital presence, drive organic traffic, and ensure your business stands out in the competitive online marketplace."
+    }
+]
