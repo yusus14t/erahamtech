@@ -12,6 +12,8 @@ import About from "./About";
 import Services from "./Services";
 import Portfolio from "./Portfolio";
 import Contact from "./Contact";
+import PortfolioDetail from "./PortfolioDetail";
+
 
 import logo from "../assets/images/logo/dark-logo.png";
 
@@ -65,8 +67,9 @@ const Navbar = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/contact" element={<Contact isSpace={true} />} />
         <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/portfolio-details/:id" element={<PortfolioDetail />} />
         <Route path="/services" element={<Services />} />
       </Routes>
     </Router>

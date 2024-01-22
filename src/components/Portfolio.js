@@ -1,5 +1,6 @@
 import React from "react";
-import { portfolio10, portfolio11, portfolio12, portfolio13, portfolio14, portfolio9 } from "../constant";
+import  {Projects}  from "../data/Projects";
+import { Link } from "react-router-dom";
 
 const Portfolio = () => {
   return (
@@ -21,157 +22,36 @@ const Portfolio = () => {
             </p>
           </div>
         </div>
-        <div className="row">
-          <div
-            className="col-lg-4 col-md-6 col-sm-6"
-            data-sal="slide-up"
-            data-sal-duration={1000}
-            data-sal-delay={100}
-          >
-            <div className="tj-portfolio-item-two">
-              <div className="portfolio-image">
-                <a href="portfolio-details.html">
-                  <img
-                    src={portfolio9}
-                    alt="Image"
-                  />
-                </a>
-              </div>
-              <div className="portfolio-content">
-                <span className="sub-title">Business Consulting</span>
-                <h4 className="title">
-                  <a href="portfolio-details.html">
-                    Digital marketing Services
-                  </a>
-                </h4>
-              </div>
-            </div>
-          </div>
-          <div
+        <div className="row">  
+          {Projects.map((project, index)=>(<div
             className="col-lg-4 col-md-6 col-sm-6"
             data-sal="slide-up"
             data-sal-duration={1000}
             data-sal-delay={200}
           >
             <div className="tj-portfolio-item-two">
-              <div className="portfolio-image">
-                <a href="portfolio-details.html">
+              <div 
+              style={{width:"400px", height:"200px"}}
+              className="portfolio-image">
+              <Link to={`/portfolio-details/${index}`}>
                   <img
-                    src={portfolio10}
+                    className="w-100 h-100"
+                    src={project.images[0]}
                     alt="Image"
                   />
-                </a>
+              </Link>
               </div>
               <div className="portfolio-content">
-                <span className="sub-title">Business Consulting</span>
                 <h4 className="title">
-                  <a href="portfolio-details.html">
-                    Digital marketing Services
-                  </a>
+                  <Link to={`/portfolio-details/${index}`}>
+                    {project.projectName}
+                  </Link>
                 </h4>
               </div>
             </div>
-          </div>
-          <div
-            className="col-lg-4 col-md-6 col-sm-6"
-            data-sal="slide-up"
-            data-sal-duration={1000}
-            data-sal-delay={300}
-          >
-            <div className="tj-portfolio-item-two">
-              <div className="portfolio-image">
-                <a href="portfolio-details.html">
-                  <img
-                    src={portfolio11}
-                    alt="Image"
-                  />
-                </a>
-              </div>
-              <div className="portfolio-content">
-                <span className="sub-title">Business Consulting</span>
-                <h4 className="title">
-                  <a href="portfolio-details.html">
-                    Digital marketing Services
-                  </a>
-                </h4>
-              </div>
-            </div>
-          </div>
-          <div
-            className="col-lg-4 col-md-6 col-sm-6"
-            data-sal="slide-up"
-            data-sal-duration={1000}
-            data-sal-delay={400}
-          >
-            <div className="tj-portfolio-item-two">
-              <div className="portfolio-image">
-                <a href="portfolio-details.html">
-                  <img
-                    src={portfolio12}
-                    alt="Image"
-                  />
-                </a>
-              </div>
-              <div className="portfolio-content">
-                <span className="sub-title">Business Consulting</span>
-                <h4 className="title">
-                  <a href="portfolio-details.html">
-                    Digital marketing Services
-                  </a>
-                </h4>
-              </div>
-            </div>
-          </div>
-          <div
-            className="col-lg-4 col-md-6 col-sm-6"
-            data-sal="slide-up"
-            data-sal-duration={1000}
-            data-sal-delay={500}
-          >
-            <div className="tj-portfolio-item-two">
-              <div className="portfolio-image">
-                <a href="portfolio-details.html">
-                  <img
-                    src={portfolio13}
-                    alt="Image"
-                  />
-                </a>
-              </div>
-              <div className="portfolio-content">
-                <span className="sub-title">Business Consulting</span>
-                <h4 className="title">
-                  <a href="portfolio-details.html">
-                    Digital marketing Services
-                  </a>
-                </h4>
-              </div>
-            </div>
-          </div>
-          <div
-            className="col-lg-4 col-md-6 col-sm-6"
-            data-sal="slide-up"
-            data-sal-duration={1000}
-            data-sal-delay={600}
-          >
-            <div className="tj-portfolio-item-two">
-              <div className="portfolio-image">
-                <a href="portfolio-details.html">
-                  <img
-                    src={portfolio14}
-                    alt="Image"
-                  />
-                </a>
-              </div>
-              <div className="portfolio-content">
-                <span className="sub-title">Business Consulting</span>
-                <h4 className="title">
-                  <a href="portfolio-details.html">
-                    Digital marketing Services
-                  </a>
-                </h4>
-              </div>
-            </div>
-          </div>
+            <div className="text-center "><Link to={`/portfolio-details/${index}`}><h5 className="text-dark">{project.projectName}</h5></Link></div>
+          </div>))}
+        
         </div>
       </div>
     </section>

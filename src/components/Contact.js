@@ -1,9 +1,24 @@
-import React from "react";
+import React , {useRef }from "react";
 import { mail, phone, shape31, shape32, shape33, shape34 } from "../constant";
 
-const Contact = () => {
+import emailjs from '@emailjs/browser';
+
+
+const Contact = ({ isSpace = null }) => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_it4j7jg', 'template_airt6eu', form.current, 's7GXJFZL0xYkp-W_z')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
   return (
-    <section className="tj-contact-section">
+    <section className={"tj-contact-section " + (isSpace && "pt-5 mt-5")}>
       <div className="container">
         <div className="row">
           <div className="col-lg-12">
@@ -50,6 +65,8 @@ const Contact = () => {
                 </div>
               </div>
               <form
+                ref={form}
+                onSubmit={sendEmail}
                 action="#"
                 className="contact-form-box"
                 data-sal="slide-left"
@@ -59,6 +76,7 @@ const Contact = () => {
                 <div className="form-input">
                   <label>Your Name</label>
                   <input
+                    name="name"
                     type="text"
                     className="form__input"
                     placeholder=""
@@ -66,8 +84,22 @@ const Contact = () => {
                   />
                 </div>
                 <div className="form-input">
+                  <label>Mobile Number</label>
+                  <input
+                  name="mobile"
+                    type="text"
+                    className="form__input"
+                    placeholder=""
+                    required
+                    inputMode="numeric"
+                    maxLength={10}
+                    minLength={10}
+                  />
+                </div>
+                <div className="form-input">
                   <label>Email Address</label>
                   <input
+                    name="email"
                     type="email"
                     className="form__input"
                     placeholder=""
@@ -87,7 +119,7 @@ const Contact = () => {
                   <button
                     className="btn tj-primary-btn"
                     type="submit"
-                    value="submit"
+                    value="send"
                   >
                     Submit Now
                   </button>

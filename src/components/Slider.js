@@ -3,15 +3,7 @@ import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import { test1, test2, test3, test4, farru, mousin, zaid, per } from "../constant";
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faCode,
-  faCoffee,
-  faStar,
-  faStarHalfStroke,
-} from "@fortawesome/free-solid-svg-icons";
+import { test4, farru, mousin, zaid, per } from "../constant";
 
 // Import Swiper styles
 import "swiper/css";
@@ -19,13 +11,16 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
+const IsLaptopView = window.screen.availWidth > 767
+
+
 export default () => {
   return (
     <Swiper
       // install Swiper modules
       modules={[Navigation, Pagination, Scrollbar, A11y]}
       spaceBetween={50}
-      slidesPerView={3}
+      slidesPerView={IsLaptopView ? 3 : 1}
       navigation
       pagination={{ clickable: true }}
       // scrollbar={{ draggable: false }}
@@ -140,7 +135,6 @@ export default () => {
           </p>
         </div>
       </SwiperSlide>
-      ...
     </Swiper>
   );
 };
